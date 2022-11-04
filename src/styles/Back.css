@@ -1,0 +1,17 @@
+.back{
+    font-size: 40px;
+    padding: 25px;
+    text-decoration: none;
+    color: var(--primary);
+    opacity: 0%;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    color: white;
+
+    /* animation: fadeIn 1s ease-in-out 1.5s 1;
+    animation-fill-mode: forwards; */
+}
+.back a{
+    color: white;
+}

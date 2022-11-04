@@ -1,0 +1,70 @@
+
+
+.achievements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card_wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 100px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0%;
+}
+
+.card{
+    width: auto;
+    height: auto;
+}
+.card button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 11 / 8.5;
+    width: 300px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ncshs button{
+    background-image: url(../assets/ncshs.png);
+}
+#nhra button{
+    background-image: url(../assets/nhra.png);
+}
+#njhs{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    aspect-ratio: 8.5 / 11;
+
+    display: flex;
+    align-self: center;
+}
+#njhs button{
+    background-image: url(../assets/njhs.png)
+}
+#act button{
+    background-image: url(../assets/activity\ award.png);
+}
+#appre button{
+    background-image: url(../assets/certificate\ of\ appreciation.png);
+}

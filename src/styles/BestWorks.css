@@ -1,32 +1,4 @@
-*
-{
-    margin: 0;
-    padding: 0;
-}
-body a{
-    font-size: 40px;
-    padding: 25px;
-    text-decoration: none;
-    color: var(--primary);
-    opacity: 0%;
-    display: inline-block;
-    z-index: 1;
-    position: absolute;
 
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-delay: 1.5s;
-}
-
-.webgl
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}
 
 .scroll-wrapper{
     display: flex;
@@ -44,11 +16,12 @@ body a{
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
     font-size: xx-large;
     color: var(--primary);
-    animation: fadeIn 1.5s ease-in-out 1s 1;
-    animation-fill-mode: forwards;
+    /* animation: fadeIn 1.5s ease-in-out 1s 1;
+    animation-fill-mode: forwards; */
+    color: white;
 }
 
-.wrapper{
+.bestworks{
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -78,7 +51,7 @@ body a{
     transform: translateX(-50%);
     border-radius: 10px;
     overflow-y: scroll;
-    opacity: 0%;
+    /* opacity: 0; */
 
     display: grid;
     grid-template-columns: auto;
@@ -86,8 +59,8 @@ body a{
 
     scroll-snap-type: y mandatory;
 
-    animation: comeIn 1s ease-in-out 0.5s 1;
-    animation-fill-mode: forwards;
+    /* animation: comeIn 1s ease-in-out 0.5s 1;
+    animation-fill-mode: forwards; */
 }
 .img-wrapper::-webkit-scrollbar {
     display: none;
@@ -148,12 +121,8 @@ body a{
     transform: translateX(30vw);
     color: white;
 
-    animation-name: slideIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-delay: 0.5s;
-    animation: slideIn 1s ease-in-out delay iteration-count direction fill-mode;
+    /* animation: slideIn 1s ease-in-out 0.5s 1;
+    animation-fill-mode: forwards; */
 }
 .desc-wrapper h1{
 
