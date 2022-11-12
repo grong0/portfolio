@@ -40,6 +40,15 @@ function Background() {
                 <span style={{"--i":13}} />
                 <div style={{"--i":4}} className="big" />
                 <span style={{"--i":28}} />
+                <span style={{"--i":11}} />
+                <span style={{"--i":14}} />
+                <span style={{"--i":23}} />
+                <span style={{"--i":18}} />
+                <span style={{"--i":16}} />
+                <span style={{"--i":19}} />
+                <div style={{"--i":3}} className="big" />
+                <span style={{"--i":22}} />
+                <span style={{"--i":25}} />
             </div>
         </div>
     );

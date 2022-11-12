@@ -36,11 +36,10 @@ function Back() {
 
     return (
         <motion.div className="back" variants={backMotion} initial={"from"} animate={"to"} exit={"exit"} whileHover={"hover"} whileTap={"tap"}>
-            <Link to="/_" onClick={() => click(isClicked => !isClicked)}>
+            <Link to="/portfolio/_" onClick={() => click(isClicked => !isClicked)}>
                 <i className="bi bi-arrow-left-circle-fill"></i>
             </Link>
         </motion.div>
-        
     )
 }
 

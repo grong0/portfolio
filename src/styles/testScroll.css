@@ -1,0 +1,52 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 50vw;
+    background-color: white;
+    padding: 12px;
+}
+.scroll{
+    height: 500px;
+    width: 100%;
+    background-color: orange;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    position: relative;
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    --margin: 300px;
+}
+.scroll h1:first-child{
+    margin-top: var(--margin);
+}
+.scroll h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--margin);
+    scroll-snap-align: center;
+}
+.container p{
+    width: 100%;
+    text-align: center;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsTest button:first-child{
+    margin-right: 60px;
+}
+#next, #previous{
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}

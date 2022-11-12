@@ -14,7 +14,10 @@
 }
 
 
-
+#hi{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+}
 
 
 .aboutme{
@@ -53,7 +56,7 @@
     /* animation: leftSide 1.5s ease-out 0s 1;
     animation-fill-mode: forwards; */
 }
-#pfp{
+.pfpContainer{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -62,16 +65,55 @@
     aspect-ratio: 1;
     width: 100%;
     border-radius: 50%;
-    object-fit: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#pfp source{
+    width: 100px;
+    height: 50px;
+}
+#pfp img{
+    width: 100px;
+    height: 100px;
 }
 #status{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
+}
+#occ, #con{
     font-size: 20px;
     list-style: none;
+    font-weight: lighter;
+}
+#occ strong{
+    font-size: 25px;
+    margin-left: -25px;
+}
+#occ ul{
+    list-style-type: circle;
+}
+#con{
+    margin-top: 30px;
+}
+#con a{
+    color: white;
+    text-decoration: none;
+    transition: color, 0.1s;
+}
+#con a:hover{
+    color: rgb(100, 230, 255);
+}
+#con li{
+    margin-bottom: 10px;
+}
+#con svg{
+    margin-left: -25px;
+    margin-right: 25px;
 }
 #description{
     grid-column-start: 2;
@@ -80,14 +122,15 @@
     grid-row-end: 3;
 
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: 20px;
-    line-height: 1.45;
+    /* font-size: 1vw; */
+    height: 100%;
+    font-weight: lighter;
 }
 
 .wrapper-activities{
     grid-area: "act";
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     gap: 30px;
     height: 100% - var(--actPad);
     width: 100% - var(--actPad);
@@ -142,6 +185,12 @@
     color: black;
     text-align: center;
     font-size: 18px;
+}
+.wrapper-img div{
+    background: rgba(0, 0, 0, 0.8);
+}
+.wrapper-img div p{
+    color: white;
 }
 .wrapper-img:hover div{
     opacity: 100%;

@@ -6,10 +6,10 @@ const wrapperMotion = {
         scale: 3,
         opacity: 0,
         gap: "125px",
-        y: 75,
+        // y: 125,
         transition: {
-            duration: 0.5,
-            ease: "easeInOut"
+            duration: 1,
+            type: "spring"
         }
     }
 }

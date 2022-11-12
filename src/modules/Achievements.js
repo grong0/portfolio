@@ -2,6 +2,7 @@ import '../styles/Achievements.css';
 import { useEffect, useRef } from 'react';
 import {motion} from 'framer-motion';
 import VanillaTilt from 'vanilla-tilt';
+import Image from './Image';
 
 function Tilt(props) {
     const { options, ...rest } = props;
@@ -53,7 +54,7 @@ function Achievements() {
         glare: true,
         "max-glare": 0.2,
         speed: 400,
-        scale: 1.3,
+        scale: 1.5,
         max: 10,
         perspective: 1200
     }
@@ -66,11 +67,11 @@ function Achievements() {
                 animate={"to"}
                 exit={"exit"}
             >
-                <Tilt id="ncshs" className="card" options={{ options }}> <button> </button> </Tilt>
-                <Tilt id="nhra" className="card" options={{ options }}> <button> </button> </Tilt>
-                <Tilt id="njhs" className="card" options={{ vertOpt }}> <button> </button> </Tilt>
-                <Tilt id="act" className="card" options={{ options }}> <button> </button> </Tilt>
-                <Tilt id="appre" className="card" options={{ options }}> <button> </button> </Tilt>
+                <Tilt id="ncshs" className="card" options={ options }> <button> <Image src={process.env.PUBLIC_URL + '/assets/achievements/ncshs.webp'} fallback={process.env.PUBLIC_URL + '/assets/achievements/ncshs.jpg'} alt={"ncshs"}/> </button> </Tilt>
+                <Tilt id="nhra" className="card" options={ options }> <button> <Image src={process.env.PUBLIC_URL + '/assets/achievements/nhra.webp'} fallback={process.env.PUBLIC_URL + '/assets/achievements/nhra.png'} alt={"nhra"}/> </button> </Tilt>
+                <Tilt id="njhs" className="card" options={ vertOpt }> <button> <Image src={process.env.PUBLIC_URL + '/assets/achievements/njhs.webp'} fallback={process.env.PUBLIC_URL + '/assets/achievements/njhs.jpg'} alt={"njhs"}/> </button> </Tilt>
+                <Tilt id="act" className="card" options={ options }> <button> <Image src={process.env.PUBLIC_URL + '/assets/achievements/act.webp'} fallback={process.env.PUBLIC_URL + '/assets/achievements/act.jpg'} alt={"act"}/> </button> </Tilt>
+                <Tilt id="appre" className="card" options={ options }> <button> <Image src={process.env.PUBLIC_URL + '/assets/achievements/appre.webp'} fallback={process.env.PUBLIC_URL + '/assets/achievements/appre.jpg'} alt={"appre"}/> </button> </Tilt>
                 {/* <button class="card" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.5" data-tilt-max="10" data-tilt-perspective="1200"><div></div></button> */}
             </motion.div> 
         </div>

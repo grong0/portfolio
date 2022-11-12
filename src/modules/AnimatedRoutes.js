@@ -7,18 +7,18 @@ import Achievements from './Achievements.js';
 import BestWorks from './BestWorks.js';
 
 import { AnimatePresence } from 'framer-motion';
+import TestScroll from './testScroll.js';
 
 function AnimatedRoutes() {
-    const location = useLocation();
-
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-                <Route exact path="/" element={<Home1 />}/>
-                <Route path="/_" element={<Home2 />}/>
-                <Route path="/aboutme" element={<><Back /><AboutMe /></>}/>
-                <Route path="/bestworks" element={<><Back /><BestWorks /></>}/>
-                <Route path="/achievements" element={<><Back /><Achievements /></>}/>
+                <Route exact path="/portfolio/" element={<Home1 />}/>
+                <Route path="/portfolio/_" element={<Home2 />}/>
+                <Route path="/portfolio/aboutme" element={<><Back /><AboutMe /></>}/>
+                <Route path="/portfolio/bestworks" element={<><Back /><BestWorks /></>}/>
+                <Route path="/portfolio/achievements" element={<><Back /><Achievements /></>}/>
+                <Route path="/portfolio/testScroll" element={<TestScroll />}/>
             </Routes>
         </AnimatePresence>
     )
