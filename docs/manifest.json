@@ -1,0 +1,8 @@
+{
+  "short_name": "Digital Portfolio",
+  "name": "Garrett Tupper's Digital Portfolio",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

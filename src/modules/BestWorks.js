@@ -13,7 +13,8 @@ const descMotion = {
         x: "0vw",
         transition: {
             duration: 1,
-            ease: "easeInOut"
+            delay: 0.5,
+            ease: "easeOut"
         }
     },
     exit: {
@@ -39,7 +40,8 @@ const imgMotion = {
         transition: {
             duration: 1,
             delay: 0.5,
-            type: "spring"
+            // type: "spring"
+            ease: "easeOut"
         }
     },
     exit: {
@@ -77,18 +79,10 @@ const dirctionMotion = {
         y: 0,
         transition: {
             duration: 1.5,
-            delay: 1,
+            delay: 1.5,
             ease: "easeInOut"
         }
     },
-    // exit: {
-    //     opacity: 0,
-    //     transition: {
-    //         duration: 0.5,
-    //         delay: 0,
-    //         type: "spring"
-    //     }
-    // },
     hover: {
         "border-width": "8px",
         scale: 1.05,

@@ -16,7 +16,7 @@ const descMotion = {
         opacity: 1,
         transition: {
             duration: 1.5,
-            delay: 0.3,
+            delay: 0.5,
             type: "spring"
         }
     },
@@ -43,7 +43,7 @@ const actMotion = {
         opacity: 1,
         transition: {
             duration: 1.5,
-            delay: 0.3,
+            delay: 0.5,
             type: "spring"
         }
     },
