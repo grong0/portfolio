@@ -1,7 +1,9 @@
 import '../styles/Back.css';
 import { Link, useLocation } from 'react-router-dom';
-import {motion} from 'framer-motion';
-import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { useState } from 'react';
 
 const backMotion = {
     from: {
@@ -32,12 +34,10 @@ const backMotion = {
 }
 
 function Back() {
-    const [isClicked, click] = useState(false);
-
     return (
         <motion.div className="back" variants={backMotion} initial={"from"} animate={"to"} exit={"exit"} whileHover={"hover"} whileTap={"tap"}>
             <Link to="/portfolio/_" onClick={() => click(isClicked => !isClicked)}>
-                <i className="bi bi-arrow-left-circle-fill"></i>
+                <FontAwesomeIcon icon={faArrowAltCircleLeft}></FontAwesomeIcon>
             </Link>
         </motion.div>
     )

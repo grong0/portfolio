@@ -5,28 +5,6 @@ import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faArrowUp, faArrowDown, faPassport } from '@fortawesome/free-solid-svg-icons';
 
-const scrollMotion = {
-    from: {
-        opacity: 0
-    },
-    to: {
-        opacity: 1,
-        transition: {
-            duration: 1.5,
-            delay: 1,
-            ease: "easeInOut"
-        }
-    },
-    exit: {
-        opacity: 0,
-        transition: {
-            duration: 0.5,
-            delay: 0,
-            type: "spring"
-            // ease: "easeInOut"
-        }
-    }
-}
 const descMotion = {
     from: {
         x: "30vw"
@@ -35,7 +13,6 @@ const descMotion = {
         x: "0vw",
         transition: {
             duration: 1,
-            delay: 0.5,
             ease: "easeInOut"
         }
     },
@@ -78,25 +55,40 @@ const imgMotion = {
     }
 }
 const dirctionMotion = {
-    from: {
+    fromTop: {
+        y: "-50px",
+        opacity: 0
+    },
+    fromBottom: {
+        y: "50px",
+        opacity: 0
+    },
+    fromLeft: {
+        x: "-50xpx",
+        opacity: 0
+    },
+    fromRight: {
+        x: "50px",
         opacity: 0
     },
     to: {
         opacity: 1,
+        x: 0,
+        y: 0,
         transition: {
             duration: 1.5,
             delay: 1,
             ease: "easeInOut"
         }
     },
-    exit: {
-        opacity: 0,
-        transition: {
-            duration: 0.5,
-            delay: 0,
-            ease: "easeInOut"
-        }
-    },
+    // exit: {
+    //     opacity: 0,
+    //     transition: {
+    //         duration: 0.5,
+    //         delay: 0,
+    //         type: "spring"
+    //     }
+    // },
     hover: {
         "border-width": "8px",
         scale: 1.05,
@@ -112,8 +104,52 @@ const dirctionMotion = {
             type: "tween",
             duration: 0.2
         }
+    },
+
+
+    exitTop: {
+        y: "-90px",
+        opacity: 0,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    },
+    exitBottom: {
+        y: "90px",
+        opacity: 0,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    },
+    exitLeft: {
+        x: "-90xpx",
+        opacity: 0,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    },
+    exitRight: {
+        x: "90px",
+        opacity: 0,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
     }
+    
 }
+// const bestworksMotion = {
+//     exit: {
+//         scale: "30%",
+//         transition: {
+//             duration: 1,
+//             type: "spring"
+//         }
+//     }
+// }
 
 
 
@@ -337,7 +373,7 @@ function BestWorks() {
     })
 
     return (
-        <motion.div className="bestworks">
+        <motion.div className="bestworks" >
             {/* <motion.div className="scroll-wrapper"
                 variants={scrollMotion}
                 initial={"from"}
@@ -350,9 +386,9 @@ function BestWorks() {
             <div className="buttons">
                 <motion.button
                     variants={dirctionMotion}
-                    initial={"from"}
+                    initial={"fromTop"}
                     animate={"to"}
-                    exit={"exit"}
+                    exit={"exitTop"}
                     whileHover={"hover"}
                     whileTap={"tap"}
                     onClick={() => changePos("up")}
@@ -362,9 +398,9 @@ function BestWorks() {
                 </motion.button>
                 <motion.button
                     variants={dirctionMotion}
-                    initial={"from"}
+                    initial={"fromBottom"}
                     animate={"to"}
-                    exit={"exit"}
+                    exit={"exitBottom"}
                     whileHover={"hover"}
                     whileTap={"tap"}
                     onClick={() => changePos("down")}
@@ -374,9 +410,9 @@ function BestWorks() {
                 </motion.button>
                 <motion.button
                     variants={dirctionMotion}
-                    initial={"from"}
+                    initial={"fromLeft"}
                     animate={"to"}
-                    exit={"exit"}
+                    exit={"exitLeft"}
                     whileHover={"hover"}
                     whileTap={"tap"} 
                     onClick={() => changePos("left")}
@@ -386,9 +422,9 @@ function BestWorks() {
                 </motion.button>
                 <motion.button
                     variants={dirctionMotion}
-                    initial={"from"}
+                    initial={"fromRight"}
                     animate={"to"}
-                    exit={"exit"}
+                    exit={"exitRight"}
                     whileHover={"hover"} 
                     whileTap={"tap"}
                     onClick={() => changePos("right")}

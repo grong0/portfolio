@@ -10,13 +10,14 @@ import { AnimatePresence } from 'framer-motion';
 import TestScroll from './testScroll.js';
 
 function AnimatedRoutes() {
+    var location = useLocation();
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route exact path="/portfolio/" element={<Home1 />}/>
                 <Route path="/portfolio/_" element={<Home2 />}/>
-                <Route path="/portfolio/aboutme" element={<><Back /><AboutMe /></>}/>
                 <Route path="/portfolio/bestworks" element={<><Back /><BestWorks /></>}/>
+                <Route path="/portfolio/aboutme" element={<><Back /><AboutMe /></>}/>
                 <Route path="/portfolio/achievements" element={<><Back /><Achievements /></>}/>
                 <Route path="/portfolio/testScroll" element={<TestScroll />}/>
             </Routes>

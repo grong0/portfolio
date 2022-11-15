@@ -56,10 +56,18 @@ const bubbleMotion = {
         }
     },
     hover: {
-        scale: 1.1
+        scale: 1.1,
+        transition: {
+            duration: 0.5,
+            type: "spring"
+        }
     },
     tap: {
-        scale: 0.9
+        scale: 0.95,
+        transition: {
+            duration: 0.5,
+            type: "spring"
+        }
     }
 }
 
@@ -104,7 +112,7 @@ function Home() {
                     whileHover={"hover"} 
                     whileTap={"tap"}
                 >
-                    <Link to="/portfolio/achievements"> <p>Achievements</p></Link>
+                    <Link to="/portfolio/achievements"> <p>Awards</p></Link>
                 </motion.div>
             </motion.div>
         </>

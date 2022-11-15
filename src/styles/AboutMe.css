@@ -5,13 +5,7 @@
 }
 
 
-.webgl
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}
+
 
 
 #hi{
@@ -125,6 +119,7 @@
     /* font-size: 1vw; */
     height: 100%;
     font-weight: lighter;
+    font-size: 1.05vw;
 }
 
 .wrapper-activities{

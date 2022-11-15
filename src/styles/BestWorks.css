@@ -22,7 +22,7 @@
     height: 100vh;
     width: 100vw;
     grid-template-columns: 70% 30%;
-    position: relative;
+    position: absolute;
 }
 .img-wrapper{
     grid-column-start: 1;
@@ -41,9 +41,6 @@
     gap: 80vh;
 
     scroll-snap-type: y mandatory;
-
-    /* animation: comeIn 1s ease-in-out 0.5s 1;
-    animation-fill-mode: forwards; */
 }
 .img-wrapper::-webkit-scrollbar {
     display: none;
@@ -60,8 +57,7 @@
     transform: translateX(30vw);
     color: white;
 
-    /* animation: slideIn 1s ease-in-out 0.5s 1;
-    animation-fill-mode: forwards; */
+    z-index: 2;
 }
 .word-wrapper h1{
     font-size: 50px;
@@ -74,10 +70,6 @@
 .word-wrapper p{
     font-size: 18px;
     font-weight: lighter;
-}
-
-.fadeOut{
-    animation: fadeOut 0.5s ease-in-out 0s 1 forwards forwards;
 }
 
 .carosel:first-child{
@@ -173,43 +165,4 @@
 }
 #right{
     right: var(--distance);
-}
-
-
-/* Key Frames */
-@keyframes slideIn{
-    from{transform: translateX(30vw);}
-    to{transform: translateX(0vw);}
-}
-
-@keyframes fadeIn{
-    from{opacity: 0%;}
-    to{opacity: 100%;}
-}
-@keyframes fadeOut{
-    from{opacity: 100%;}
-    to{opacity: 0%;}
-}
-
-@keyframes slideInOut{
-    0%{
-        width: 100%;
-    }
-    50%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
-}
-
-@keyframes comeIn{
-    from{
-        opacity: 0%;
-        transform: translateX(-50%) scale(50%);
-    }
-    to{
-        opacity: 100%;
-        transform: translateX(-50%) scale(100%);
-    }
 }
