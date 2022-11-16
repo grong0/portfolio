@@ -148,7 +148,7 @@ const dirctionMotion = {
 
 
 
-
+// initPage = false;
 
 
 
@@ -207,7 +207,7 @@ function BestWorks() {
                 currentEle = suscodeRef;
                 descTitleRef.current.innerHTML = "School iPad Script"
                 descDateRef.current.innerHTML = "March 2022 - March 2022"
-                descDescRef.current.innerHTML = "A script that I created to expose a serious flaw with the security and privacy of my school's student accounts. The fault that it revealed is that every student's Apple ID password was the same. Knowing this, I made a simple script that would first take in information from a Google Sheet to put together a student email and then use that email to log into its respective iCloud account. It would then access the find my iPhone service, get the school iPad coordinates, then plot it on a map. After showing this to my principal and explaining the dangers of everyone having the same password, the passwords changed."
+                descDescRef.current.innerHTML = "A script that I created to expose a serious flaw with the security and privacy of my school's student accounts. The fault that it revealed is that every student's Apple ID password was the same. Knowing this, I made a simple script that would first take in information from a Google Sheet to put together a student email and then use that email to log into its respective iCloud account. It would then access the find my iPhone service, get the school iPad coordinates, then plot it on a map. After alterting this to my principal and explaining the dangers of everyone having the same password, the passwords changed immediately."
                 break;
         }
         console.log("second case statement")

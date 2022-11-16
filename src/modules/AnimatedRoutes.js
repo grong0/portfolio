@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from './Home.js';
 import Home1 from './Home1.js'
 import AboutMe from "./AboutMe.js";
 import Back from './Back.js';
@@ -14,12 +15,13 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-                <Route exact path="/portfolio/" element={<Home1 />}/>
-                <Route path="/portfolio/_" element={<Home2 />}/>
-                <Route path="/portfolio/bestworks" element={<><Back /><BestWorks /></>}/>
-                <Route path="/portfolio/aboutme" element={<><Back /><AboutMe /></>}/>
-                <Route path="/portfolio/achievements" element={<><Back /><Achievements /></>}/>
-                <Route path="/portfolio/testScroll" element={<TestScroll />}/>
+                {/* <Route exact path="/portfolio/" element={<Home1 />}/>
+                <Route exact path="/portfolio/_" element={<Home2 />}/> */}
+                <Route exact path={"/portfolio/"}     element={<Home />}/>
+                <Route path="/portfolio/bestworks"    element={<BestWorks />}/>
+                <Route path="/portfolio/aboutme"      element={<AboutMe />}/>
+                <Route path="/portfolio/achievements" element={<Achievements />}/>
+                <Route path="/portfolio/testScroll"   element={<TestScroll />}/>
             </Routes>
         </AnimatePresence>
     )

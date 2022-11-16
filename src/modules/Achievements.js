@@ -40,6 +40,8 @@ const cardsMotion = {
     }
 }
 
+// initPage = false;
+
 function Achievements() {
 
     const options = {

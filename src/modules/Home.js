@@ -1,6 +1,50 @@
 import '../styles/Home.css'
 import { Link, useLocation } from 'react-router-dom';
 import {motion} from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
+const home1Motion = {
+    from: {},
+    to: {},
+    exit: {
+        scale: 3,
+        opacity: 0,
+        gap: "125px",
+        // y: 125,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    }
+}
+const home2Motion = {
+    from: {
+        scale: 3,
+        opacity: 0,
+        gap: "125px",
+        // y: 125
+    },
+    to: {
+        scale: 1,
+        opacity: 1,
+        gap: "50px",
+        // y: 0,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    },
+    exit: {
+        scale: 3,
+        opacity: 0,
+        gap: "125px",
+        // y: 125,
+        transition: {
+            duration: 1,
+            type: "spring"
+        }
+    }
+}
 
 const titleMotion = {
     from: {
@@ -79,8 +123,30 @@ const bubbleMotion = {
 
 function Home() {
     const location = useLocation().pathname;
+
+    var variant = home1Motion;
+    const wrapperRef = useRef();
+
+    useEffect(() => {
+        wrapperRef.current.classList.add("init");
+        if ( !initPage ) {
+            wrapperRef.current.classList.remove("init");
+        }
+    })
+
+    if (!initPage) {
+        variant = home2Motion;
+    }
+
     return (
-        <>
+        <motion.div className='home'
+            variants={variant}
+            initial={"from"}
+            animate={"to"}
+            exit={"exit"}
+
+            ref={wrapperRef}
+        >
             <h1 id="title">Garrett Tupper</h1>
             <motion.div className="bubble-wrapper"
                 // variants={location === "/_" ? parentMotion : {}}
@@ -93,9 +159,8 @@ function Home() {
                     whileHover={"hover"} 
                     whileTap={"tap"}
                 >
-                    <Link to="/portfolio/aboutme"><p>About Me</p></Link>
+                    <Link onClick={() => {initPage = false}}  to="/portfolio/aboutme"><p>About Me</p></Link>
                 </motion.div>
-                {/* <a id="activities" data-tilt data-tilt-speed="400" data-tilt-scale="1.2" data-tilt-perspective="1200"><div id="activities" class="bubble"><p>Activities</p></div></a> */}
                 <motion.div id="best" 
                     variants={bubbleMotion} 
                     // initial={location === "/_" ? "bounceInit" : ""} 
@@ -103,7 +168,7 @@ function Home() {
                     whileHover={"hover"} 
                     whileTap={"tap"}
                 >
-                    <Link to="/portfolio/bestworks"><p>Best Works</p></Link>
+                    <Link onClick={() => {initPage = false}}  to="/portfolio/bestworks"><p>Best Works</p></Link>
                 </motion.div>
                 <motion.div id="achievements" 
                     variants={bubbleMotion} 
@@ -112,10 +177,10 @@ function Home() {
                     whileHover={"hover"} 
                     whileTap={"tap"}
                 >
-                    <Link to="/portfolio/achievements"> <p>Awards</p></Link>
+                    <Link onClick={() => {initPage = false}}  to="/portfolio/achievements"> <p>Awards</p></Link>
                 </motion.div>
             </motion.div>
-        </>
+        </motion.div>
     )
 }
 
